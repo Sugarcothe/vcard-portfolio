@@ -507,17 +507,15 @@
               <li class="filter-item">
                 <button class="active" data-filter-btn>All</button>
               </li>
-
+              <li class="filter-item">
+                <button data-filter-btn>cloud</button>
+              </li>
               <li class="filter-item">
                 <button data-filter-btn>frontend</button>
               </li>
 
               <li class="filter-item">
                 <button data-filter-btn>fullstack</button>
-              </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>Others</button>
               </li>
             </ul>
 
@@ -536,6 +534,9 @@
                 <li class="select-item">
                   <button data-select-item>All</button>
                 </li>
+                <li class="select-item">
+                  <button data-select-item>cloud</button>
+                </li>
 
                 <li class="select-item">
                   <button data-select-item>frontend</button>
@@ -544,14 +545,42 @@
                 <li class="select-item">
                   <button data-select-item>fullstack</button>
                 </li>
-
-                <li class="select-item">
-                  <button data-select-item>Others</button>
-                </li>
               </ul>
             </div>
 
             <ul class="project-list">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="cloud"
+              >
+                <a
+                  target="blank"
+                  target="blank"
+                  href="https://github.com/Sugarcothe/Infra-code-aws"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/infra-diagram.jpg"
+                      alt="orizon"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Infrastructure as Code config/params</h3>
+                  <br>
+                  <h3 class="project-title">
+                    AWS, YML, VPC, Subnet, Security, Autoscaling, Load Balancer,
+                    NAT Gateway, s3 bucket
+                  </h3>
+
+                  <p class="project-category">cloud</p>
+                </a>
+              </li>
               <li
                 class="project-item active"
                 data-filter-item
@@ -575,7 +604,6 @@
                   <p class="project-category">Fullstack</p>
                 </a>
               </li>
-
               <li
                 class="project-item active"
                 data-filter-item
