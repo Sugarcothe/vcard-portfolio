@@ -4,7 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Icodetill.xyz - DEVOPS ENGINEER</title>
+    <script src="./email.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("user_CPUrZMkDdKmWI19xzxeJA");
+    </script>
+    <title>Icodetill.xyz - FULLSTACK || DEVOPS ENGINEER</title>
 
     <!--
     - favicon
@@ -54,7 +63,7 @@
           <div class="info-content">
             <h1 class="name" title="Eze Valentine">Eze Valentine</h1>
 
-            <p class="title">Cloud Native | DevOps</p>
+            <p class="title">FULLSTACK || DEVOPS ENGINEER</p>
           </div>
 
           <button class="info_more-btn" data-sidebar-btn>
@@ -484,9 +493,9 @@
 
             <ul class="skills-list content-card">
               <li class="h5">
-                Git/Github, Shell, Ansible, Kubernetes, CircleCI, Database, YAML/JSON,
-                Docker, Linux Jenkins, HTML/CSS, CSS Frameworks, Python,
-                Javascript, React, ExpressJS, NodeJs, Django.
+                Git/Github, Shell, Ansible, Kubernetes, CircleCI, Database,
+                YAML/JSON, Docker, Linux, Jenkins, HTML/CSS, CSS Frameworks,
+                Python, Javascript, React, ExpressJS, NodeJs, Django.
               </li>
             </ul>
           </section>
@@ -1078,11 +1087,19 @@
           <section class="contact-form">
             <h3 class="h3 form-title">Contact Form</h3>
 
-            <form action="#" class="form" data-form>
+            <form
+              onsubmit="SendEmail()";
+              reset();
+              return
+              false;
+              class="form"
+              data-form
+            >
               <div class="input-wrapper">
                 <input
                   type="text"
-                  name="fullname"
+                  name="from_name"
+                  id="from_name"
                   class="form-input"
                   placeholder="Full name"
                   required
@@ -1090,8 +1107,9 @@
                 />
 
                 <input
-                  type="email"
-                  name="email"
+                  type="text"
+                  name="email_id"
+                  id="email_id"
                   class="form-input"
                   placeholder="Email address"
                   required
@@ -1100,14 +1118,22 @@
               </div>
 
               <textarea
+                type="text"
                 name="message"
+                id="message"
                 class="form-input"
                 placeholder="Your Message"
                 required
                 data-form-input
               ></textarea>
 
-              <button class="form-btn" type="submit" disabled data-form-btn>
+              <button
+                class="form-btn"
+                onclick="SendMail()"
+                type="submit"
+                disabled
+                data-form-btn
+              >
                 <ion-icon name="paper-plane"></ion-icon>
                 <span>Send Message</span>
               </button>
@@ -1117,6 +1143,25 @@
       </div>
     </main>
 
+    <!-- 
+      Email script 
+    -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function SendEmail() {
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "ifeanyivalentine82@gmail.com",
+          Password: "anthonyJ5*",
+          To: "ifeanyivalentine82@gmail.com",
+          From: document.getElementById("email_id").value,
+          Subject: "MESSAGE FROM PORTFOLIO!",
+          Body: "Name: " + document.getElementById("from_name").value 
+          + "<br> Email: " + document.getElementById("email_id").value
+          + "<br> Message: " + document.getElementById("message").value
+        }).then((message) => alert("Message sent Succesfuly!"));
+      }
+    </script>
     <!--
     - custom js link
   -->
