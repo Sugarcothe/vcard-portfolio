@@ -388,10 +388,10 @@
 
                 <span>20013 — 2017</span>
 
-                <p class="timeline-text">
+                <!-- <p class="timeline-text">
                   Studied Philosophy, were i major in social contract and human
                   tolerance
-                </p>
+                </p> -->
               </li>
 
               <li class="timeline-item">
@@ -494,8 +494,9 @@
             <ul class="skills-list content-card">
               <li class="h5">
                 Git/Github, Shell, Ansible, Kubernetes, CircleCI, Database,
-                YAML/JSON, Docker, Prometheus, Linux, Jenkins, HTML/CSS, CSS Frameworks,
-                Python, Javascript, React, ExpressJS, NodeJs, Django.
+                YAML/JSON, Docker, Prometheus, Linux, Jenkins,
+                HTML/CSS, CSS Frameworks, Python, Javascript, React, ExpressJS,
+                NodeJs, Django.
               </li>
             </ul>
           </section>
@@ -1088,7 +1089,8 @@
             <h3 class="h3 form-title">Contact Form</h3>
 
             <form
-              onsubmit="SendEmail()";
+              onsubmit="SendEmail()"
+              ;
               reset();
               return
               false;
@@ -1156,9 +1158,13 @@
           To: "ifeanyivalentine82@gmail.com",
           From: document.getElementById("email_id").value,
           Subject: "MESSAGE FROM PORTFOLIO!",
-          Body: "Name: " + document.getElementById("from_name").value 
-          + "<br> Email: " + document.getElementById("email_id").value
-          + "<br> Message: " + document.getElementById("message").value
+          Body:
+            "Name: " +
+            document.getElementById("from_name").value +
+            "<br> Email: " +
+            document.getElementById("email_id").value +
+            "<br> Message: " +
+            document.getElementById("message").value,
         }).then((message) => alert("Message sent Succesfuly!"));
       }
     </script>
