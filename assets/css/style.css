@@ -1119,6 +1119,7 @@ main {
 
 .blog-posts {
   margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
 .blog-posts-list {
